@@ -1,0 +1,25 @@
+{
+  "name": "tuomokar-personal-site",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^2.23.11",
+    "gatsby-link": "^2.4.8",
+    "gatsby-plugin-typescript": "^2.4.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "prettier": "2.0.5"
+  }
+}
