@@ -11,10 +11,13 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@types/react-bootstrap": "^1.0.1",
+    "bootstrap": "^4.5.0",
     "gatsby": "^2.23.11",
     "gatsby-link": "^2.4.8",
     "gatsby-plugin-typescript": "^2.4.8",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
