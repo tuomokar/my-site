@@ -1,3 +1,3 @@
-import DefaultPage from './page-1'
+import DefaultPage from './about-me'
 
 export default DefaultPage
