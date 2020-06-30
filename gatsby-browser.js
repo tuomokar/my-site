@@ -3,6 +3,6 @@ import Container from 'react-bootstrap/Container'
 // side effect import
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-export const wrapRootElement = ({ element }) => (
+export const wrapPageElement = ({ element }) => (
   <Container className="p-3">{element}</Container>
 )
