@@ -1,0 +1,31 @@
+import * as React from 'react'
+import { graphql } from 'gatsby'
+import Img from 'gatsby-image'
+
+interface MainPageProps {
+  data: any // TODO improve typing
+}
+
+const MainPage: React.FC<MainPageProps> = ({ data }) => {
+  return (
+    <div>
+      <Img fixed={data.file.childImageSharp.fixed} />
+    </div>
+  )
+}
+
+export default MainPage
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "tuomo-oila.jpg" }) {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 125, height: 125) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`
