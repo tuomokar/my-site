@@ -1,17 +1,17 @@
 import * as React from 'react'
 
-import SquareTopRight from '../components/square-right-top'
-import SquareRightBottom from '../components/square-right-bottom'
-import SquareLeftBottom from '../components/square-left-bottom'
-import SquareLeftTop from '../components/square-left-top'
+import BlogLink from '../components/blog-link'
+import Contact from '../components/contact'
+import Hobbies from '../components/hobbies'
+import About from '../components/about'
 import SelfImage from '../components/self-image'
 
 const MainPage: React.FC = () => (
   <React.Fragment>
-    <SquareLeftTop />
-    <SquareTopRight />
-    <SquareLeftBottom />
-    <SquareRightBottom />
+    <About />
+    <BlogLink />
+    <Hobbies />
+    <Contact />
 
     <SelfImage />
   </React.Fragment>

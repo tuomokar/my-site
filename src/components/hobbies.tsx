@@ -20,7 +20,7 @@ const StyledSquare = styled(Square)`
   bottom: 0;
 `
 
-const SquareRightBottom: React.FC = () => (
+const Hobbies: React.FC = () => (
   <StyledSquare color={MAIN_COLOR_1} onHover={handleSquareHover}>
     <div>Hobbies</div>
     <ExpandedTextContainer id={hobbiesTextExpanded}>
@@ -29,4 +29,4 @@ const SquareRightBottom: React.FC = () => (
   </StyledSquare>
 )
 
-export default SquareRightBottom
+export default Hobbies

@@ -16,7 +16,7 @@ const AboutTextExpandedContainer = styled.div`
   display: none;
 `
 
-const SquareRightBottom: React.FC = () => (
+const About: React.FC = () => (
   <Square color={MAIN_COLOR_2} onHover={handleSquareHover}>
     <div>About</div>
     <AboutTextExpandedContainer id={aboutTextExpandedId}>
@@ -31,4 +31,4 @@ const SquareRightBottom: React.FC = () => (
   </Square>
 )
 
-export default SquareRightBottom
+export default About
