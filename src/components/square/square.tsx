@@ -13,14 +13,14 @@ const TextContainer = styled.div`
   flex-direction: column;
 `
 
-interface SquareWithTextProps {
+interface SquareProps {
   children: React.ReactNode
   color: string
   className?: string
   onHover?: string
 }
 
-const SquareWithText: React.FC<SquareWithTextProps> = ({
+const Square: React.FC<SquareProps> = ({
   children,
   className,
   color,
@@ -31,4 +31,4 @@ const SquareWithText: React.FC<SquareWithTextProps> = ({
   </SquareBase>
 )
 
-export default SquareWithText
+export default Square

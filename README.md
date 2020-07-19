@@ -4,7 +4,7 @@ Code for my personal web site. Done with Gatsby.
 
 https://tuomo-oila.netlify.app/
 
-**Please note that it's still heavily under construction!**
+**Please note that it's still under construction!**
 
 ## Gatsby
 

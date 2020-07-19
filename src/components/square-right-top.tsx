@@ -2,10 +2,10 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Link from 'gatsby-link'
-import SquareWithText from './square-with-text'
+import Square from './square'
 import { MAIN_COLOR_1 } from '../colors'
 
-const StyledSquareWithText = styled(SquareWithText)`
+const StyledSquare = styled(Square)`
   right: 0;
 `
 
@@ -28,12 +28,12 @@ const StyledLink = styled(Link)`
 // TODO: need to change how this reacts in smaller windows
 // (such as on mobile - not really good looking there right now)
 const SquareRightTop: React.FC = () => (
-  <StyledSquareWithText color={MAIN_COLOR_1} onHover={handleSquareHover}>
+  <StyledSquare color={MAIN_COLOR_1} onHover={handleSquareHover}>
     <div>Blog</div>
     <LinkTextContainer id={blogLinkTextId}>
       <StyledLink to="/blog">Click here to move to the blog</StyledLink>
     </LinkTextContainer>
-  </StyledSquareWithText>
+  </StyledSquare>
 )
 
 export default SquareRightTop

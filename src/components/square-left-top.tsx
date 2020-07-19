@@ -1,7 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import SquareWithText from './square-with-text'
+import Square from './square'
 import { MAIN_COLOR_2 } from '../colors'
 
 const aboutTextExpandedId = 'tuomokar-about-text-expanded'
@@ -17,7 +17,7 @@ const AboutTextExpandedContainer = styled.div`
 `
 
 const SquareRightBottom: React.FC = () => (
-  <SquareWithText color={MAIN_COLOR_2} onHover={handleSquareHover}>
+  <Square color={MAIN_COLOR_2} onHover={handleSquareHover}>
     <div>About</div>
     <AboutTextExpandedContainer id={aboutTextExpandedId}>
       <div>
@@ -26,9 +26,9 @@ const SquareRightBottom: React.FC = () => (
         next generation software regarding staffing, payroll management and
         workforce scheduling.
       </div>
-      <div>Please note that this site is still heavily under construction!</div>
+      <div>Please note that this site is still under construction!</div>
     </AboutTextExpandedContainer>
-  </SquareWithText>
+  </Square>
 )
 
 export default SquareRightBottom
