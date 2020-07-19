@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Square from './square'
-import { MAIN_COLOR_2 } from '../colors'
 
 const contactTextExpanded = 'tuomokar-contact-text-expanded'
 
@@ -22,7 +21,7 @@ const StyledSquare = styled(Square)`
 `
 
 const Contact: React.FC = () => (
-  <StyledSquare color={MAIN_COLOR_2} onHover={handleSquareHover}>
+  <StyledSquare color="green" onHover={handleSquareHover}>
     <div>Contact</div>
     <ExpandedTextContainer id={contactTextExpanded}>
       Coming soon..

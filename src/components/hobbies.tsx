@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Square from './square'
-import { MAIN_COLOR_1 } from '../colors'
 
 const hobbiesTextExpanded = 'tuomokar-hobbies-text-expanded'
 
@@ -21,7 +20,7 @@ const StyledSquare = styled(Square)`
 `
 
 const Hobbies: React.FC = () => (
-  <StyledSquare color={MAIN_COLOR_1} onHover={handleSquareHover}>
+  <StyledSquare color="blue" onHover={handleSquareHover}>
     <div>Hobbies</div>
     <ExpandedTextContainer id={hobbiesTextExpanded}>
       Coming soon..

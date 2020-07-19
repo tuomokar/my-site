@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 interface SquareBaseProps {
-  color: string
+  color: 'blue' | 'green'
   children: React.ReactNode
   className?: string
   onHover?: string
@@ -15,15 +15,13 @@ const Container = styled.div<ContainerProps>`
   position: absolute;
   width: 50%;
   height: 50%;
-  background-color: ${({ color }) => color};
+  background-color: ${({ color, theme }) =>
+    color === 'blue' ? theme.colors.primaryBlue : theme.colors.primaryGreen};
 
-  ${({ onHover }) =>
-    onHover &&
-    `
     :hover {
-       ${onHover}
+         ${onHover}
     }
-  `}
+    `}
 `
 
 const SquareBase: React.FC<SquareBaseProps> = ({

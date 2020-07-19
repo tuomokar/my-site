@@ -2,7 +2,6 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Square from './square'
-import { MAIN_COLOR_2 } from '../colors'
 
 const aboutTextExpandedId = 'tuomokar-about-text-expanded'
 
@@ -17,7 +16,7 @@ const AboutTextExpandedContainer = styled.div`
 `
 
 const About: React.FC = () => (
-  <Square color={MAIN_COLOR_2} onHover={handleSquareHover}>
+  <Square color="green" onHover={handleSquareHover}>
     <div>About</div>
     <AboutTextExpandedContainer id={aboutTextExpandedId}>
       <div>

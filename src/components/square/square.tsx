@@ -15,7 +15,7 @@ const TextContainer = styled.div`
 
 interface SquareProps {
   children: React.ReactNode
-  color: string
+  color: 'blue' | 'green'
   className?: string
   onHover?: string
 }

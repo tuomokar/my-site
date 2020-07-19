@@ -2,6 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import GlobalStyles from './global-styles'
+import Theme from './theme'
 
 interface ContainerProps {
   children: React.ReactNode
@@ -12,10 +13,10 @@ const PageContentContainer = styled.div`
 `
 
 const PageContainer: React.FC<ContainerProps> = ({ children }) => (
-  <React.Fragment>
+  <Theme>
     <GlobalStyles />
     <PageContentContainer>{children}</PageContentContainer>
-  </React.Fragment>
+  </Theme>
 )
 
 export default PageContainer
