@@ -10,6 +10,7 @@ interface SquareBaseProps {
 
 type ContainerProps = Pick<SquareBaseProps, 'color' | 'onHover'>
 
+// TODO: extract `onHover` so that it's not passed to the DOM element
 const Container = styled.div<ContainerProps>`
   position: absolute;
   width: 50%;

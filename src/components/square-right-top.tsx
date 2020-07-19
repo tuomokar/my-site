@@ -25,15 +25,15 @@ const StyledLink = styled(Link)`
   color: white;
 `
 
-const SquareRightTop: React.FC = () => {
-  return (
-    <StyledSquareWithText color={MAIN_COLOR_1} onHover={handleSquareHover}>
-      <div>Blog</div>
-      <LinkTextContainer id={blogLinkTextId}>
-        <StyledLink to="/blog">Click here to move to the blog</StyledLink>
-      </LinkTextContainer>
-    </StyledSquareWithText>
-  )
-}
+// TODO: need to change how this reacts in smaller windows
+// (such as on mobile - not really good looking there right now)
+const SquareRightTop: React.FC = () => (
+  <StyledSquareWithText color={MAIN_COLOR_1} onHover={handleSquareHover}>
+    <div>Blog</div>
+    <LinkTextContainer id={blogLinkTextId}>
+      <StyledLink to="/blog">Click here to move to the blog</StyledLink>
+    </LinkTextContainer>
+  </StyledSquareWithText>
+)
 
 export default SquareRightTop
