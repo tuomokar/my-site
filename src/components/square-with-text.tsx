@@ -10,20 +10,23 @@ const TextContainer = styled.div`
   color: white;
   height: 100%;
   font-size: 30px;
+  flex-direction: column;
 `
 
 interface SquareWithTextProps {
-  children: string
+  children: React.ReactNode
   color: string
   className?: string
+  onHover?: string
 }
 
 const SquareWithText: React.FC<SquareWithTextProps> = ({
   children,
   className,
   color,
+  onHover,
 }) => (
-  <SquareBase className={className} color={color}>
+  <SquareBase className={className} color={color} onHover={onHover}>
     <TextContainer>{children}</TextContainer>
   </SquareBase>
 )
