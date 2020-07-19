@@ -1,14 +1,27 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import styled from 'styled-components'
+
 import SquareTopRight from '../components/square-right-top'
 import SquareRightBottom from '../components/square-right-bottom'
 import SquareLeftBottom from '../components/square-left-bottom'
 import SquareLeftTop from '../components/square-left-top'
 
+const SelfImageContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`
+
 interface MainPageProps {
   data: any // TODO improve typing
 }
+
+const StyledImage = styled(Img)`
+  border-radius: 50%;
+`
 
 const MainPage: React.FC<MainPageProps> = ({ data }) => {
   return (
@@ -18,19 +31,12 @@ const MainPage: React.FC<MainPageProps> = ({ data }) => {
       <SquareLeftBottom />
       <SquareRightBottom />
 
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: '100%',
-        }}
-      >
-        <Img
+      <SelfImageContainer>
+        <StyledImage
           fixed={data.file.childImageSharp.fixed}
           style={{ borderRadius: '50%' }}
         />
-      </div>
+      </SelfImageContainer>
     </React.Fragment>
   )
 }
