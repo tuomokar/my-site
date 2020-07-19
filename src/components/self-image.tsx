@@ -24,7 +24,7 @@ const SelfImage: React.FC = () => {
     query {
       file(relativePath: { eq: "tuomo-oila.jpg" }) {
         childImageSharp {
-          fixed(width: 125, height: 125) {
+          fixed(width: 150, height: 150) {
             ...GatsbyImageSharpFixed
           }
         }
