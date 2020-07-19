@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 import Img from 'gatsby-image'
+import SquareTopRight from '../components/square-right-top'
+import SquareRightBottom from '../components/square-right-bottom'
+import SquareLeftBottom from '../components/square-left-bottom'
+import SquareLeftTop from '../components/square-left-top'
 
 interface MainPageProps {
   data: any // TODO improve typing
@@ -8,9 +12,26 @@ interface MainPageProps {
 
 const MainPage: React.FC<MainPageProps> = ({ data }) => {
   return (
-    <div>
-      <Img fixed={data.file.childImageSharp.fixed} />
-    </div>
+    <React.Fragment>
+      <SquareLeftTop />
+      <SquareTopRight />
+      <SquareLeftBottom />
+      <SquareRightBottom />
+
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100%',
+        }}
+      >
+        <Img
+          fixed={data.file.childImageSharp.fixed}
+          style={{ borderRadius: '50%' }}
+        />
+      </div>
+    </React.Fragment>
   )
 }
 
