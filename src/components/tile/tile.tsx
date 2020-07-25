@@ -1,27 +1,27 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import SquareBase from './square-base'
+import TileBase from './tile-base'
 
-interface SquareProps {
+interface TileProps {
   extraContent: React.ReactNode
   initialContent: React.ReactNode
   color: 'blue' | 'green'
   className?: string
 }
 
-const Square: React.FC<SquareProps> = ({
+const Tile: React.FC<TileProps> = ({
   extraContent,
   initialContent,
   className,
   color,
 }) => (
-  <SquareBase
+  <TileBase
     className={className}
     color={color}
     initialContent={initialContent}
     extraContent={extraContent}
-  ></SquareBase>
+  ></TileBase>
 )
 
-export default Square
+export default Tile

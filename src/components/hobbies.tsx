@@ -1,18 +1,18 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import Square from './square'
+import Tile from './tile'
 
 const ExpandedTextContainer = styled.div`
   display: none;
 `
 
-const StyledSquare = styled(Square)`
+const StyledTile = styled(Tile)`
   bottom: 0;
 `
 
 const Hobbies: React.FC = () => (
-  <StyledSquare
+  <StyledTile
     color="blue"
     initialContent="Hobbies"
     extraContent="Coming soon.."

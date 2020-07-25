@@ -11,14 +11,14 @@ const TextContainer = styled.div`
   flex-direction: column;
 `
 
-interface SquareBaseProps {
+interface TileBaseProps {
   color: 'blue' | 'green'
   extraContent: React.ReactNode
   initialContent: React.ReactNode
   className?: string
 }
 
-type ContainerProps = Pick<SquareBaseProps, 'color'>
+type ContainerProps = Pick<TileBaseProps, 'color'>
 
 const MainContainer = styled.div<ContainerProps>`
   position: absolute;
@@ -28,7 +28,7 @@ const MainContainer = styled.div<ContainerProps>`
     color === 'blue' ? theme.colors.primaryBlue : theme.colors.primaryGreen};
 `
 
-const SquareBase: React.FC<SquareBaseProps> = ({
+const TileBase: React.FC<TileBaseProps> = ({
   color,
   className,
   extraContent,
@@ -53,4 +53,4 @@ const SquareBase: React.FC<SquareBaseProps> = ({
   )
 }
 
-export default SquareBase
+export default TileBase

@@ -1,10 +1,10 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
-import Square from './square'
+import Tile from './tile'
 
 const About: React.FC = () => (
-  <Square
+  <Tile
     color="green"
     initialContent="About"
     extraContent={

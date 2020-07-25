@@ -2,9 +2,9 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 import Link from 'gatsby-link'
-import Square from './square'
+import Tile from './tile'
 
-const StyledSquare = styled(Square)`
+const StyledTile = styled(Tile)`
   right: 0;
 `
 
@@ -13,7 +13,7 @@ const StyledLink = styled(Link)`
 `
 
 const BlogLink: React.FC = () => (
-  <StyledSquare
+  <StyledTile
     color="blue"
     initialContent="Blog"
     extraContent={
