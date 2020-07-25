@@ -1,5 +1,8 @@
 import * as React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
+
+import { MainColor } from '../../types/colors'
 
 const TextContainer = styled.div`
   display: flex;
@@ -12,7 +15,7 @@ const TextContainer = styled.div`
 `
 
 interface TileBaseProps {
-  color: 'blue' | 'green'
+  color: MainColor
   extraContent: React.ReactNode
   initialContent: React.ReactNode
   className?: string
@@ -20,12 +23,11 @@ interface TileBaseProps {
 
 type ContainerProps = Pick<TileBaseProps, 'color'>
 
-const MainContainer = styled.div<ContainerProps>`
+const Container = styled.div<ContainerProps>`
   position: absolute;
   width: 50%;
   height: 50%;
-  background-color: ${({ color, theme }) =>
-    color === 'blue' ? theme.colors.primaryBlue : theme.colors.primaryGreen};
+  background-color: ${({ color, theme }) => theme.colors[color]};
 `
 
 const TileBase: React.FC<TileBaseProps> = ({
@@ -34,22 +36,20 @@ const TileBase: React.FC<TileBaseProps> = ({
   extraContent,
   initialContent,
 }) => {
-  const [extraContentVisible, setExtraContentVisible] = React.useState(false)
+  const [extraContentVisible, setExtraContentVisible] = useState(true)
 
   return (
-    <React.Fragment>
-      <MainContainer
-        className={className}
-        color={color}
-        onMouseOver={() => setExtraContentVisible(true)}
-        onMouseLeave={() => setExtraContentVisible(false)}
-      >
-        <TextContainer>
-          <div>{initialContent}</div>
-          {extraContentVisible && extraContent}
-        </TextContainer>
-      </MainContainer>
-    </React.Fragment>
+    <Container
+      className={className}
+      color={color}
+      onMouseOver={() => setExtraContentVisible(true)}
+      onMouseLeave={() => setExtraContentVisible(false)}
+    >
+      <TextContainer>
+        <div>{initialContent}</div>
+        {extraContentVisible && extraContent}
+      </TextContainer>
+    </Container>
   )
 }
 

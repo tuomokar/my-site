@@ -1,12 +1,12 @@
 import * as React from 'react'
-import styled from 'styled-components'
 
 import TileBase from './tile-base'
+import { MainColor } from '../../types/colors'
 
 interface TileProps {
   extraContent: React.ReactNode
   initialContent: React.ReactNode
-  color: 'blue' | 'green'
+  color: MainColor
   className?: string
 }
 
