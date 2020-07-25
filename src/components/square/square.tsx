@@ -3,32 +3,25 @@ import styled from 'styled-components'
 
 import SquareBase from './square-base'
 
-const TextContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  height: 100%;
-  font-size: 30px;
-  flex-direction: column;
-`
-
 interface SquareProps {
-  children: React.ReactNode
+  extraContent: React.ReactNode
+  initialContent: React.ReactNode
   color: 'blue' | 'green'
   className?: string
-  onHover?: string
 }
 
 const Square: React.FC<SquareProps> = ({
-  children,
+  extraContent,
+  initialContent,
   className,
   color,
-  onHover,
 }) => (
-  <SquareBase className={className} color={color} onHover={onHover}>
-    <TextContainer>{children}</TextContainer>
-  </SquareBase>
+  <SquareBase
+    className={className}
+    color={color}
+    initialContent={initialContent}
+    extraContent={extraContent}
+  ></SquareBase>
 )
 
 export default Square

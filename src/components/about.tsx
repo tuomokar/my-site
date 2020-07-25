@@ -3,31 +3,19 @@ import styled from 'styled-components'
 
 import Square from './square'
 
-const aboutTextExpandedId = 'tuomokar-about-text-expanded'
-
-const handleSquareHover = `
-  #${aboutTextExpandedId} {
-    display: block;
-  }
-`
-
-const AboutTextExpandedContainer = styled.div`
-  display: none;
-`
-
 const About: React.FC = () => (
-  <Square color="green" onHover={handleSquareHover}>
-    <div>About</div>
-    <AboutTextExpandedContainer id={aboutTextExpandedId}>
-      <div>
+  <Square
+    color="green"
+    initialContent="About"
+    extraContent={
+      <React.Fragment>
         Full stack software developer, team leader and tech lead regarding front
         end. Currently working at a small company named Haahtela HR, creating
         next generation software regarding staffing, payroll management and
         workforce scheduling.
-      </div>
-      <div>Please note that this site is still under construction!</div>
-    </AboutTextExpandedContainer>
-  </Square>
+      </React.Fragment>
+    }
+  />
 )
 
 export default About

@@ -3,14 +3,6 @@ import styled from 'styled-components'
 
 import Square from './square'
 
-const contactTextExpanded = 'tuomokar-contact-text-expanded'
-
-const handleSquareHover = `
-  #${contactTextExpanded} {
-    display: block;
-  }
-`
-
 const ExpandedTextContainer = styled.div`
   display: none;
 `
@@ -21,12 +13,11 @@ const StyledSquare = styled(Square)`
 `
 
 const Contact: React.FC = () => (
-  <StyledSquare color="green" onHover={handleSquareHover}>
-    <div>Contact</div>
-    <ExpandedTextContainer id={contactTextExpanded}>
-      Coming soon..
-    </ExpandedTextContainer>
-  </StyledSquare>
+  <StyledSquare
+    color="green"
+    initialContent="Contact"
+    extraContent="Coming soon.."
+  />
 )
 
 export default Contact

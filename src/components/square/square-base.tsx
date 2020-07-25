@@ -1,38 +1,56 @@
 import * as React from 'react'
 import styled from 'styled-components'
 
+const TextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 100%;
+  font-size: 30px;
+  flex-direction: column;
+`
+
 interface SquareBaseProps {
   color: 'blue' | 'green'
-  children: React.ReactNode
+  extraContent: React.ReactNode
+  initialContent: React.ReactNode
   className?: string
-  onHover?: string
 }
 
-type ContainerProps = Pick<SquareBaseProps, 'color' | 'onHover'>
+type ContainerProps = Pick<SquareBaseProps, 'color'>
 
-// TODO: extract `onHover` so that it's not passed to the DOM element
-const Container = styled.div<ContainerProps>`
+const MainContainer = styled.div<ContainerProps>`
   position: absolute;
   width: 50%;
   height: 50%;
   background-color: ${({ color, theme }) =>
     color === 'blue' ? theme.colors.primaryBlue : theme.colors.primaryGreen};
-
-    :hover {
-         ${onHover}
-    }
-    `}
 `
 
 const SquareBase: React.FC<SquareBaseProps> = ({
   color,
   className,
-  children,
-  onHover,
-}) => (
-  <Container onHover={onHover} className={className} color={color}>
-    {children}
-  </Container>
-)
+  extraContent,
+  initialContent,
+}) => {
+  const [extraContentVisible, setExtraContentVisible] = React.useState(false)
+
+  return (
+    <React.Fragment>
+      <MainContainer
+        className={className}
+        color={color}
+        onMouseOver={() => setExtraContentVisible(true)}
+        onMouseLeave={() => setExtraContentVisible(false)}
+      >
+        <TextContainer>
+          <div>{initialContent}</div>
+          {extraContentVisible && extraContent}
+        </TextContainer>
+      </MainContainer>
+    </React.Fragment>
+  )
+}
 
 export default SquareBase
