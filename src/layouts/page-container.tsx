@@ -8,14 +8,17 @@ interface ContainerProps {
   children: React.ReactNode
 }
 
-const PageContentContainer = styled.div`
-  height: 100vh;
+const ContentContainer = styled.div`
+  min-height: 100vh;
+  ${({ theme: { colors } }) => `
+    background-image: linear-gradient(to right, ${colors.primaryGreen} 50%, ${colors.primaryBlue} 50%);
+  `}
 `
 
 const PageContainer: React.FC<ContainerProps> = ({ children }) => (
   <Theme>
     <GlobalStyles />
-    <PageContentContainer>{children}</PageContentContainer>
+    <ContentContainer>{children}</ContentContainer>
   </Theme>
 )
 
