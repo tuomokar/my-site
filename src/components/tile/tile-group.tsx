@@ -1,7 +1,11 @@
 import * as React from 'react'
 
-import { MainColor } from '../../types/colors'
 import PositionedTile from './positioned-tile'
+import {
+  getColorForTilePosition,
+  getHorizontalPosition,
+  getVerticalIndex,
+} from './helper-functions'
 
 interface TileRenderData {
   id: string
@@ -12,29 +16,6 @@ interface TileRenderData {
 interface TileGroupProps {
   tiles: TileRenderData[]
 }
-
-type TileColorsByTileNumber = {
-  [key: number]: MainColor
-}
-const tileColorsByTileNumber: TileColorsByTileNumber = {
-  0: 'primaryBlue',
-  1: 'primaryGreen',
-  2: 'primaryGreen',
-  3: 'primaryBlue',
-}
-
-const maxNumberOfTilesInViewPort = 4
-
-const getColorForTilePosition = (tileNumber: number): MainColor => {
-  return tileColorsByTileNumber[tileNumber % maxNumberOfTilesInViewPort]
-}
-
-const isEvenNumber = (evenOrOddNumber: number) => evenOrOddNumber % 2 === 0
-
-const getHorizontalPosition = (index: number) =>
-  isEvenNumber(index) ? 'left' : 'right'
-
-const getVerticalIndex = (index: number) => Math.floor(index / 2)
 
 const TileGroup: React.FC<TileGroupProps> = ({ tiles }) => (
   <React.Fragment>
