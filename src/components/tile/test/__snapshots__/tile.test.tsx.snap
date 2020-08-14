@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tile renders correctly 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  height: 100%;
+  font-size: 30px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c0 {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #1A4782;
+}
+
+<div>
+  <div
+    class="c0"
+    color="primaryBlue"
+  >
+    <div
+      class="c1"
+    >
+      <div>
+        initialContentTestText
+      </div>
+      extraContentTestText
+    </div>
+  </div>
+</div>
+`;
