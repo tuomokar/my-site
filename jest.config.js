@@ -1,6 +1,6 @@
 module.exports = {
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': '<rootDir>/jest-preprocess.js',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'mdx'],
   testPathIgnorePatterns: ['node_modules', '.cache'],
