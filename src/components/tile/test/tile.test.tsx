@@ -18,7 +18,7 @@ const mockProps: React.ComponentProps<typeof Tile> = {
 
 const renderTile = (props = mockProps) => renderWithTheme(<Tile {...props} />)
 
-describe('tile', () => {
+describe('Tile', () => {
   it('renders correctly', () => {
     const { container } = renderTile()
 
