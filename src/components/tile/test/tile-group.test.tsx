@@ -4,7 +4,7 @@ import TileGroup from '../tile-group'
 import { renderWithTheme } from '../../../test-util/render-utils'
 import { theme } from '../../../layouts/theme'
 // Side effect import
-// TODO: not having the import here (and only in jest.setup.js) breaks typescript (the matchers aren't added to jest)
+// TODO: not having the import here (and only in jest-setup.js) breaks typescript (the matchers aren't added to jest)
 import 'jest-styled-components'
 
 const tilesData: React.ComponentProps<typeof TileGroup>['tiles'] = [
