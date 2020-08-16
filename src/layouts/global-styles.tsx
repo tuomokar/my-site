@@ -12,6 +12,10 @@ const GlobalStyle = createGlobalStyle`
   h1 {
     margin: 0;
   }
+
+  p {
+    font-size: 20px;
+  }
 `
 
 const GlobalStyles: React.FC = () => <GlobalStyle />
