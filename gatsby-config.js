@@ -7,7 +7,14 @@ module.exports = {
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-layout',
-    'gatsby-plugin-mdx',
+    {
+      resolve: 'gatsby-plugin-mdx',
+      options: {
+        defaultLayouts: {
+          default: require.resolve('./src/layouts/page-text-container.tsx'),
+        },
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
