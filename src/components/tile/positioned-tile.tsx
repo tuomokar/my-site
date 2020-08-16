@@ -10,9 +10,9 @@ interface StyledTileProps {
   verticalIndex: number
 }
 
-interface horizontalPosition extends TileProps, StyledTileProps {}
+interface PositionedTileProps extends StyledTileProps, TileProps {}
 
-const StyledTile = styled<React.FC<horizontalPosition>>(
+const StyledTile = styled<React.FC<PositionedTileProps>>(
   ({ verticalIndex, horizontalPosition, ...tileProps }) => (
     <Tile {...tileProps} />
   )
@@ -22,7 +22,7 @@ const StyledTile = styled<React.FC<horizontalPosition>>(
   top: ${({ verticalIndex }) => verticalIndex * 50}%;
 `
 
-const PositionedTile: React.FC<horizontalPosition> = ({
+const PositionedTile: React.FC<PositionedTileProps> = ({
   horizontalPosition,
   verticalIndex,
   ...tileProps

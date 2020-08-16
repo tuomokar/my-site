@@ -4,10 +4,11 @@ import TileBase from './tile-base'
 import { MainColor } from '../../types/colors'
 
 interface TileProps {
-  extraContent: React.ReactNode
+  extraContent?: React.ReactNode
   initialContent: React.ReactNode
   color: MainColor
   className?: string
+  onClick?: () => void
 }
 
 const Tile: React.FC<TileProps> = ({
@@ -15,12 +16,14 @@ const Tile: React.FC<TileProps> = ({
   initialContent,
   className,
   color,
+  onClick = null,
 }) => (
   <TileBase
     className={className}
     color={color}
     initialContent={initialContent}
     extraContent={extraContent}
+    onClick={onClick}
   ></TileBase>
 )
 

@@ -7,10 +7,11 @@ import {
   getVerticalIndex,
 } from './helper-functions'
 
-interface TileRenderData {
+type TileProps = React.ComponentProps<typeof PositionedTile>
+
+interface TileRenderData
+  extends Pick<TileProps, 'initialContent' | 'extraContent' | 'onClick'> {
   id: string
-  initialContent: React.ReactNode
-  extraContent: React.ReactNode
 }
 
 interface TileGroupProps {
@@ -19,12 +20,13 @@ interface TileGroupProps {
 
 const TileGroup: React.FC<TileGroupProps> = ({ tiles }) => (
   <React.Fragment>
-    {tiles.map(({ initialContent, extraContent, id }, index) => (
+    {tiles.map(({ initialContent, extraContent, id, onClick }, index) => (
       <PositionedTile
         horizontalPosition={getHorizontalPosition(index)}
         verticalIndex={getVerticalIndex(index)}
         key={id}
         color={getColorForTilePosition(index)}
+        onClick={onClick}
         initialContent={initialContent}
         extraContent={extraContent}
       />

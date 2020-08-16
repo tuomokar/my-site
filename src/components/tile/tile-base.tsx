@@ -19,6 +19,7 @@ interface TileBaseProps {
   extraContent: React.ReactNode
   initialContent: React.ReactNode
   className?: string
+  onClick: null | (() => void)
 }
 
 type ContainerProps = Pick<TileBaseProps, 'color'>
@@ -35,6 +36,7 @@ const TileBase: React.FC<TileBaseProps> = ({
   className,
   extraContent,
   initialContent,
+  onClick,
 }) => {
   const [extraContentVisible, setExtraContentVisible] = useState(true)
 
@@ -42,6 +44,7 @@ const TileBase: React.FC<TileBaseProps> = ({
     <Container
       className={className}
       color={color}
+      onClick={onClick ? onClick : undefined}
       onMouseOver={() => setExtraContentVisible(true)}
       onMouseLeave={() => setExtraContentVisible(false)}
     >
