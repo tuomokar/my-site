@@ -11,8 +11,6 @@ interface ContainerProps {
 const stripesDirectionFromLeft = '45deg'
 const stripesDirectionFromRight = '135deg'
 
-let stripeDirection: 'left' | 'right' = 'left'
-
 let i = 0
 // In the pages we render stripes. Alternate their direction between renders
 // (i.e. in practice when switching pages).
