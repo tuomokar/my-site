@@ -6,7 +6,9 @@ interface TextPageContainerProps {
 }
 
 const Container = styled.div`
-  padding-top: 50px;
+  padding: 50px 10px 10px;
+  max-width: 900px;
+  margin: 0 auto;
 `
 
 const PageTextContainer: React.FC<TextPageContainerProps> = ({ children }) => (
