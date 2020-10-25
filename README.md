@@ -2,7 +2,7 @@
 
 Code for my personal web site. Done with Gatsby.
 
-https://tuomo-oila.netlify.app/
+https://tuomo-oila.fi/
 
 **Please note that it's still under construction!**
 
